@@ -1,0 +1,378 @@
+#logo{
+    padding: 7px;
+    height: 73px;
+    float: left;
+}
+
+header div, main {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 84px;
+    position: absolute;
+    z-index: 9999; 
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px
+}
+
+#menu_pc a{
+    display: inline-block;
+    padding-right: 40px;
+}
+
+#menu_pc a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#menu_pc li{
+    padding: 0px;
+    float: right;
+    list-style-type: none;
+}
+
+.slidermob{
+    display: none;
+}
+
+input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-32.png');
+    background-position: 5px 4px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 400px;
+}
+
+#lijn{
+    padding-top: 150px
+}
+
+input{
+    float: left;
+}
+
+#searchBar{
+    padding-top: 15px;
+}
+
+/*webshop colom*/
+
+#colom{
+    padding: 20px;
+    text-align: center;
+}
+
+#gft{
+    
+}
+
+#colom1 img{
+    height: 170px;
+    padding: 0px 50px;
+}
+
+#colom_text1 a{
+    margin: 60px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    
+}
+
+#title{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobiel*/
+
+
+
+@media screen and (max-width: 1600px) {
+    #colom1 img{
+        padding: 0px 30px;
+    }
+    
+    #colom_text1 a{
+    margin: 40px;
+    }
+    
+    #contact{
+        padding-right: 10px
+    }
+    #assortimentLijst{
+        padding-left: 1%
+    }
+    
+    #HFID_speakerText{
+        padding-left: 34%;
+    }
+
+    #HFID_speaker{
+        padding: 0% 26%;
+
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 1500px) {
+    #menu_pc a{
+        padding-right: 35px;
+    }  
+}
+
+
+
+
+@media screen and (max-width: 1450px) {
+    #menu_pc a{
+        padding-right: 25px;
+    }   
+    
+    #colom1 img{
+        padding: 0px 15px;
+    }
+    
+    #colom_text1 a{
+        margin: 20px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1400px) {
+    #menu_pc a{
+        padding-right: 15px;
+    }
+    
+    #colom1 img{
+        padding: 0px 0px;
+    }
+    
+    #colom_text1 a{
+        margin: 10px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1340px) {
+    input[type=text]:focus {
+        width: 200px;
+    }
+    
+    #colom1 img{
+        height: 150px;
+        padding: 0px 10px;
+    }
+    
+    #colom_text1 a{
+        font-size: 19px;
+        margin: 5px;
+    }
+    
+    #contact{
+        padding-right: 10px
+    }
+    
+    #HFID_speakerText{
+        padding-left: 34%;
+    }
+
+    #HFID_speaker{
+        padding: 0% 34%;
+
+    }
+    
+    #HFID_speaker img{
+        height: 250px;
+        padding: 30px 0px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1143px) {
+    #logo{
+        padding: 7px 20px;
+    }
+    
+    #colom1 img{
+        height: 130px;
+        padding: 0px 10px;
+    }
+    
+    #colom_text1 a{
+        font-size: 16px;
+        margin: 14px;
+    }
+    
+}
+
+
+
+
+
+
+
+/*menu mobiel*/
+
+#test1{
+    display: none;
+}
+
+
+@media screen and (max-width: 1059px) {
+    #menu_pc{
+        display: none;
+    }
+    #test1 a{
+        text-decoration: none;
+        font-size: 40px
+    }
+    
+    #mobiel_menu{
+        margin: 0px;
+        padding-left: 20px
+    }
+
+    #test1{
+        position: absolute;
+        display: block;
+    }
+
+    #test1:hover #test2 {
+        display: block;
+    }
+
+    #test2 {
+        padding: 10px;
+        position: relative;
+        height: 20px;
+        background-color: black;
+
+        display: none;
+}
+
+    #test2 a{
+        display: block;
+        font-size: 20px;
+        color: white;
+    }
+    
+    #logo{
+        padding-top: 7px;
+        padding-left: 90px;
+    }
+    
+    input[type=text] {
+        width: 160px;
+    }
+    
+    #assortimentLijst{
+        display: none;
+    }
+    
+    #plusPunten{
+        display: none;
+    }
+    
+    #contact {
+        display: none;
+    }
+    
+    #lijn{
+        display: none;
+    }
+    
+    #media_mobiel{
+        display: block;
+        
+    }
+    
+    #media_mobiel img{
+        height: 35px;
+    }
+    
+    #lijn_mobiel{
+        padding-top: 120px
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

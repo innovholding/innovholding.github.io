@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="css/layout.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/stylesheets/style_help_desk.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOV. Innovation & Quality</title>
+    <script>
+    function _(id){ return document.getElementById(id); }
+    function submitForm(){
+        _("mybtn").disabled = true;
+        _("status").innerHTML = 'please wait ...';
+        var formdata = new FormData();
+        formdata.append( "n", _("n").value );
+        formdata.append( "e", _("e").value );
+        formdata.append( "m", _("m").value );
+        var ajax = new XMLHttpRequest();
+        ajax.open( "POST", "example_parser.php" );
+        ajax.onreadystatechange = function() {
+            if(ajax.readyState == 4 && ajax.status == 200) {
+                if(ajax.responseText == "success"){
+                    _("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+                } else {
+                    _("status").innerHTML = ajax.responseText;
+                    _("mybtn").disabled = false;
+                }
+            }
+        }
+        ajax.send( formdata );
+    }
+    </script>
+</head>
+
+<body style="padding:0px;margin:0px;background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
+    
+    
+    
+    <header>
+        <div>
+            <a href="index.html">
+                <img id="logo" src="img/logo.png">
+            </a>
+            <div id="searchBar">
+               <input type="text" name="search" placeholder="Search..">
+            </div>
+            <ul id="menu_pc">
+                <li id="menu_pc_li"><a href="index.html">HOME</a></li>
+                <li id="menu_pc_li"><a href="shop.html">SHOP</a></li>
+                <li id="menu_pc_li"><a href="help_desk.html">HELP DESK</a></li>                
+                <li id="menu_pc_li"><a href="over_ons.html">OVER ONS</a></li>
+                <li id="menu_pc_li"><a href="contact.html">CONTACT</a></li>
+            </ul>
+            
+            <div id="menu_mob">
+                <div id="menu_mobiel">
+                    <ul id="mobiel_menu">
+                        <li id="test1"><a href="#">☰</a>
+                            <ul>
+                                <li id="test2"><a href="index.html">HOME</a></li>
+                                <li id="test2"><a href="shop.html">SHOP</a></li>
+                                <li id="test2"><a href="help_desk.html">HELP DESK</a></li>                
+                                <li id="test2"><a href="over_ons.html">OVER ONS</a></li>
+                                <li id="test2"><a href="contact.html">CONTACT</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </header>
+       
+    <div id="lijn">
+        
+    </div>
+    
+    <div id="text">
+        <h1>Helpdesk </h1>
+            <div id="text2">   
+                <h4>
+                    <p align="left">
+                        Natuurlijk kan het gebeuren dat u ergens tegenaan loopt of ergens ontevreden over bent. Daarom hebben wij voor u persoonlijke hulp om er zeker van te zijn dat alle problemen op de juiste wijze opgelost worden. 
+                    </p>
+                    <p align="left">
+                        U kunt ons altijd in elk geval bellen met uw vraag/klacht of u kunt ons mailen via de helpdesk. Beschrijf uw probleem zo duidelijk mogelijk en geef ook uw productnummer door (de sticker op het product) zodat wij u zo goed mogelijk van dienst kunnen zijn. Wij geven uitsluitend binnen 3 werkdagen antwoord.  
+                    </p>
+                    <p align="left">
+                        Mocht er spraken zijn voor een retourzending sturen wij via de mail een retourformulier.
+                    </p>
+                </h4>
+            </div>
+    </div>
+    
+    <div id="email">   
+            <form id="my_form" onsubmit="submitForm(); return false;">
+            <fieldset>
+            <p><input id="n" placeholder="voornaam en achternaam" type="text1" required></p>
+            </fieldset>
+            <fieldset>
+            <p><input id="e" placeholder="Email Address" type="email" required></p>
+            </fieldset>
+            <fieldset>
+            <p><input id="b" placeholder="Phone number (niet verplicht)" type="tel"></p>
+            </fieldset>
+            <br>
+            <fieldset>
+            <textarea id="m" placeholder="Typ hier uw bericht hier" rows="10" required></textarea>
+            </fieldset>
+            <fieldset>
+            <p><input id="mybtn" type="submit" value="E-mail verzenden"> <span id="status"></span></p>
+            </fieldset>
+            </form>
+        </div>
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

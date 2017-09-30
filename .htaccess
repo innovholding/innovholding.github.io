@@ -1,0 +1,3 @@
+RewriteEngine On
+        RewriteCond %{HTTP_HOST} ^http://innov.ga$
+        RewriteRule ^$ http://innov.ga/index.html [L,R=301]
